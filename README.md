@@ -1,8 +1,7 @@
 
 ## Introduction
-This exercise consiste in verifying that a message is in a larger text like a magazine. In order to accomplish this, 4 different algorithms have
-been created. The main class is in the App.java file, in there, the Verify class is created using an Strategy Pattern to inject the algorithm
-that we would like to use at run time.
+This exercise consists in verifying that a message is hidden in a larger text, such as a magazine. In order to accomplish this, four different algorithms have
+been created. The main class is in the App.java file, in there, the Verify class is created using an Strategy Pattern to inject the algorithm that we would like to use at run time.
 <br/>
 
 ## Puzzle challenge description
@@ -87,8 +86,7 @@ If you want to pass your own msg/magazine those need to be in the same directory
 
 ### Test where msg and magazine are very long strings
 
-For this test both msg and magazing have taken from the file (DON_QUIJOTE_DE_LA_MANCHA.txt) The idea behing this test was to analise what would happen in scenarios where the input msg is very
-long, in this case exactly as long as the magazine(DON_QUIJOTE_DE_LA_MANCHA.txt)
+For this test both msg and magazing have been taken from the file (DON_QUIJOTE_DE_LA_MANCHA.txt) The idea behind this test is to analise what would happen in the scenarios where the input msg is very long, in this case exactly as long as the magazine (DON_QUIJOTE_DE_LA_MANCHA.txt)
 
 | Iteration   | VerifyByWordsCleanUp | VerifyByWordsCleanUpNoSort | VerifyByWordsBasic | VerifyByWordsBasicMix
 |------:|------:|------:|------:|------:|
@@ -111,8 +109,6 @@ long, in this case exactly as long as the magazine(DON_QUIJOTE_DE_LA_MANCHA.txt)
 <br/>
 
 ## Conclusions
-For the normal use case where the message will be rather small and the magazine could be randomly large
-all algorithm have similar performance, hightlighting the **VerifyByWordsBasic** that may perform slightly faster, since it does not have
-the overhead off removing the duplicates neither it sorts the arrays.
+For the normal use case, where the message would be rather small and the magazine could be randomly large, all algorithms have similar performance, hightlighting that the **VerifyByWordsBasic** may perform slightly faster, since it does not have the overhead of removing the duplicate words neither it sorts the arrays.
 But for large messages (in the tests as large as the magazine), it changes quite a bit, and the algorithms that include improvements such as
-removing duplicated words and sorting the arrays (**VerifyByWordsCleanUp**, **VerifyByWordsCleanUpNoSort** ) perform much better than the others two.
+removing duplicated words and sorting the arrays (**VerifyByWordsCleanUp**, **VerifyByWordsCleanUpNoSort** ) perform much better than the other two.
