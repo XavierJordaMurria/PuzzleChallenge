@@ -50,6 +50,18 @@ The complexity for the VerifyByWordsBasic is: O(m)*O(n)
 <br/>
 <br/>
 
+## Build/Run Me
+By default if no arguments passed it will get the files from the resources file
+* Build jar: mvn package
+* Run jar: from the root directory **java -cp ./target/puzzle-1.0-SNAPSHOT.jar com.jorda.puzzle.App**
+
+If you want to pass your own msg/magazine those need to be in the same directory than the .jar
+* Run jar with args: from the root directory **java -cp ./target/puzzle-1.0-SNAPSHOT.jar com.jorda.puzzle.App /msg.txt /magazine.txt**
+
+<br/>
+<br/>
+
+
 ## BenchMark
 
 ### Test standard use case scenario where msg is relatively short and magazine relatively long
