@@ -5,10 +5,7 @@ import java.util.ArrayList;
 /**
  * VeryfyByWords is an algorithm that given a msg String and a magazine String
  * will split those strings into words and try to find all the msg's words into
- * the magazine words. For this algorithm it is assumed that i.e. the word
- * "<World>" === "World!" === "World" === "world", so a first data cleaning
- * proces will be required to be sure that all the words are lowercase and
- * without any puntuation marks or pre/postfixed with any other symbol. Also to
+ * the magazine words. Also to
  * optimize the search all the duplicates are being removed
  */
 public class VerifyByWordsCleanUpNoSort extends Algorithm {

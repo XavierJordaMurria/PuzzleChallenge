@@ -51,7 +51,7 @@ The complexity for the VerifyByWordsBasic is: O(m)*O(n)
 <br/>
 
 ## Build/Run Me
-By default if no arguments passed it will get the files from the resources file
+By default if no arguments passed it will get the files from the src/main/resources directory
 * Build jar: mvn package
 * Run jar: from the root directory **java -cp ./target/puzzle-1.0-SNAPSHOT.jar com.jorda.puzzle.App**
 
@@ -87,7 +87,7 @@ If you want to pass your own msg/magazine those need to be in the same directory
 
 ### Test where msg and magazine are very long strings
 
-For this test both msg and magazing have taken from the file (DON_QUIJOTE_DE_LA_MANCHA.txt) The idea behing this test was to analise what would happen in expres scenarios where the input msg is very
+For this test both msg and magazing have taken from the file (DON_QUIJOTE_DE_LA_MANCHA.txt) The idea behing this test was to analise what would happen in scenarios where the input msg is very
 long, in this case exactly as long as the magazine(DON_QUIJOTE_DE_LA_MANCHA.txt)
 
 | Iteration   | VerifyByWordsCleanUp | VerifyByWordsCleanUpNoSort | VerifyByWordsBasic | VerifyByWordsBasicMix

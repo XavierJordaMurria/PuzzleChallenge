@@ -7,6 +7,8 @@ import java.util.Collections;
  * VerifyByWordsBasic is an algorithm that given a msg String and a magazine
  * String will split those strings into words and try to find all the msg's
  * words into the magazine words.
+ * This one also removes the duplicates words from the magazine and sorts the
+ * output
  */
 public class VerifyByWordsBasicMix extends Algorithm {
 
