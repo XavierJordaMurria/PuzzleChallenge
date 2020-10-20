@@ -22,12 +22,19 @@ should be sufficient.
 ## Big O Notation
 m = length of the message
 n = lenght of the magazine
+k = lenght of the message dictionary
 
-The complexity for the VerifyByWordsBasic is: O(m)*O(n)
+The complexity for the VerifyByLetters is: O(m)*O(n)*O(k)
 
 <br/>
 
 ## Algorithms
+* **VerifyByLetters**: 
+    This algorithm generates a key, value Map for the msg and the magazine. Where the key is each letter of the
+    txt and the value is the number of times it apears on that text.
+    The algorithm will return true if all the entries from the msgDictionary are in the magazineDictionary and
+    the values are equal or lower, meaning that there are enough letters in the magazine to generate that msg. 
+    This algorithm is case sensitive, i.e. w != W.
 
 * **VerifyByWordsBasic**: 
     * Normalizing text, removing punctuation marks and making it lowercase.

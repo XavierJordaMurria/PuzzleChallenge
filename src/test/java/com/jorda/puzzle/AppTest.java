@@ -1,9 +1,9 @@
 package com.jorda.puzzle;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 import com.jorda.puzzle.Algorithm.IAlgorithm;
+import com.jorda.puzzle.Algorithm.VerifyByLetters;
 import com.jorda.puzzle.Algorithm.VerifyByWordsBasic;
 import com.jorda.puzzle.Algorithm.VerifyByWordsBasicMix;
 import com.jorda.puzzle.Algorithm.VerifyByWordsCleanUp;
@@ -20,7 +20,8 @@ public class AppTest
         new VerifyByWordsCleanUp(),
         new VerifyByWordsCleanUpNoSort(),
         new VerifyByWordsBasic(),
-        new VerifyByWordsBasicMix()
+        new VerifyByWordsBasicMix(),
+        new VerifyByLetters()
     };
 
     /**
@@ -31,7 +32,7 @@ public class AppTest
     {
 
         String msg = "Hello World!";
-        String text = "Hello Mark, the world is very big";
+        String text = "Hello Mark, the World is very big!";
 
         Verify verify = new Verify(new VerifyByWordsCleanUp());
 
@@ -53,8 +54,8 @@ public class AppTest
     public void msgExistDuplicateWords()
     {
 
-        String msg = "Hello hello hello World!";
-        String text = "Hello Mark, the world is very big";
+        String msg = "Hello, hello hello World!";
+        String text = "Hello Mark!, the World is very big hello hello";
 
         Verify verify = new Verify(new VerifyByWordsCleanUp());
 

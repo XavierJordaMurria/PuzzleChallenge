@@ -7,6 +7,7 @@ import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 
 import com.jorda.puzzle.Algorithm.IAlgorithm;
+import com.jorda.puzzle.Algorithm.VerifyByLetters;
 import com.jorda.puzzle.Algorithm.VerifyByWordsBasic;
 import com.jorda.puzzle.Algorithm.VerifyByWordsBasicMix;
 import com.jorda.puzzle.Algorithm.VerifyByWordsCleanUp;
@@ -84,7 +85,7 @@ public class App {
             System.exit(1);
         }
 
-        Verify verify = new Verify(new VerifyByWordsCleanUp());
+        Verify verify = new Verify(new VerifyByLetters());
         System.out.println(verify.verifyMsg(msg, magazine));
 
         // For default user cases
