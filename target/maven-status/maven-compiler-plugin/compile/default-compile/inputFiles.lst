@@ -2,6 +2,8 @@
 /home/xavi/Documents/RavenPack/puzzle/src/main/java/com/jorda/puzzle/Algorithm/Algorithm.java
 /home/xavi/Documents/RavenPack/puzzle/src/main/java/com/jorda/puzzle/Algorithm/VerifyByWordsCleanUpNoSort.java
 /home/xavi/Documents/RavenPack/puzzle/src/main/java/com/jorda/puzzle/Algorithm/VerifyByWordsBasic.java
+/home/xavi/Documents/RavenPack/puzzle/src/main/java/com/jorda/puzzle/Utils/Utils.java
+/home/xavi/Documents/RavenPack/puzzle/src/main/java/com/jorda/puzzle/Algorithm/VerifyByLetters.java
 /home/xavi/Documents/RavenPack/puzzle/src/main/java/com/jorda/puzzle/Verify.java
 /home/xavi/Documents/RavenPack/puzzle/src/main/java/com/jorda/puzzle/Algorithm/IAlgorithm.java
 /home/xavi/Documents/RavenPack/puzzle/src/main/java/com/jorda/puzzle/App.java
