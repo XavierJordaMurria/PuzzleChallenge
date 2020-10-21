@@ -8,6 +8,7 @@ import java.nio.charset.StandardCharsets;
 
 import com.jorda.puzzle.Algorithm.IAlgorithm;
 import com.jorda.puzzle.Algorithm.VerifyByLetters;
+import com.jorda.puzzle.Algorithm.VerifyByLettersOp1;
 import com.jorda.puzzle.Algorithm.VerifyByWordsBasic;
 import com.jorda.puzzle.Algorithm.VerifyByWordsBasicMix;
 import com.jorda.puzzle.Algorithm.VerifyByWordsCleanUp;
@@ -85,19 +86,24 @@ public class App {
             System.exit(1);
         }
 
-        Verify verify = new Verify(new VerifyByLetters());
+        IAlgorithm alg = new VerifyByLettersOp1();
+        System.out.println("Verifiying Msg with algorithm: " + alg.getAlgorithmName());
+        Verify verify = new Verify(alg);
         System.out.println(verify.verifyMsg(msg, magazine));
 
         // For default user cases
+        //IAlgorithm[] algorithmsArr = { new VerifyByWordsCleanUp(), new VerifyByWordsCleanUpNoSort(),
+        //    new VerifyByWordsBasic(), new VerifyByWordsBasicMix() };
         // App.benchMark(msg, magazine);
 
         // For large text comparison
         // App.benchMark(magazine, magazine);
+
+        // IAlgorithm[] algorithmsArr = { new VerifyByLetters(), new VerifyByLettersOp1()};
+        // App.benchMark(msg, magazine, algorithmsArr);
     }
 
-    private static void benchMark(String msg, String text) {
-        IAlgorithm[] algorithmsArr = { new VerifyByWordsCleanUp(), new VerifyByWordsCleanUpNoSort(),
-                new VerifyByWordsBasic(), new VerifyByWordsBasicMix() };
+    private static void benchMark(String msg, String text, IAlgorithm[] algorithmsArr) {
 
         Verify verify = new Verify(new VerifyByWordsCleanUp());
 

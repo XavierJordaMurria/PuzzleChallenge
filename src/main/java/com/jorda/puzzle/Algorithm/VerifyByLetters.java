@@ -48,6 +48,6 @@ public class VerifyByLetters extends Algorithm {
 
     @Override
     public String getAlgorithmName() {
-        return VerifyByWordsBasic.class.getName();
+        return VerifyByLetters.class.getName();
     }
 }

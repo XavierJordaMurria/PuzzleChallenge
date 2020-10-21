@@ -36,6 +36,13 @@ The complexity for the VerifyByLetters is: O(m)*O(n)*O(k)
     the values are equal or lower, meaning that there are enough letters in the magazine to generate that msg. 
     This algorithm is case sensitive, i.e. w != W.
 
+* **VerifyByLettersOp1**: 
+    This algorithm generates a key, value Map for the msg. Where the key is each letter of the
+    txt and the value is the number of times it apears on that text.
+    The algorithm loops through the magazine and everytime it finds a letter that is key to the msg
+    dictionary it decreases the msg Dictionary value for that key. When the value is 0 the entry
+    get removed from the dictionary and if the dictionary gets emptied before the loop ends it returns true.
+
 * **VerifyByWordsBasic**: 
     * Normalizing text, removing punctuation marks and making it lowercase.
 
@@ -67,9 +74,31 @@ If you want to pass your own msg/magazine those need to be in the same directory
 <br/>
 <br/>
 
-
+<br/>
+<br/>
 ## BenchMark
 
+### Test for the Verifying algorithms by letters
+
+| Iteration  | VerifyByLetters | VerifyByLettersOp1
+|------:|------:|------:|
+| 0 | 215ms | 93ms |
+| 1 | 115ms | 52ms |
+| 2 | 115ms | 81ms |
+| 3 | 94ms | 60ms |
+| 4 | 70ms | 39ms |
+| 5 | 132ms | 39ms |
+| 6 | 124ms | 31ms |
+| 7 | 134ms | 49ms |
+| 8 | 87ms | 46ms |
+| 9 | 148ms | 32ms |
+
+<br><br>
+![](test_letters.png)
+<br/>
+
+<br/>
+<br/>
 ### Test standard use case scenario where msg is relatively short and magazine relatively long
 
 ##### For this test the msg comes from the msg.txt file and the magazine from the DON_QUIJOTE_DE_LA_MANCHA.txt
@@ -89,6 +118,9 @@ If you want to pass your own msg/magazine those need to be in the same directory
 
 <br><br>
 ![](normal_use.png)
+<br/>
+
+<br/>
 <br/>
 
 ### Test where msg and magazine are very long strings
@@ -114,8 +146,3 @@ For this test both msg and magazing have been taken from the file (DON_QUIJOTE_D
 
 <br/>
 <br/>
-
-## Conclusions
-For the normal use case, where the message would be rather small and the magazine could be randomly large, all algorithms have similar performance, hightlighting that the **VerifyByWordsBasic** may perform slightly faster, since it does not have the overhead of removing the duplicate words neither it sorts the arrays.
-But for large messages (in the tests as large as the magazine), it changes quite a bit, and the algorithms that include improvements such as
-removing duplicated words and sorting the arrays (**VerifyByWordsCleanUp**, **VerifyByWordsCleanUpNoSort** ) perform much better than the other two.

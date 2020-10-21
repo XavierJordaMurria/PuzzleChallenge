@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 
 import com.jorda.puzzle.Algorithm.IAlgorithm;
 import com.jorda.puzzle.Algorithm.VerifyByLetters;
+import com.jorda.puzzle.Algorithm.VerifyByLettersOp1;
 import com.jorda.puzzle.Algorithm.VerifyByWordsBasic;
 import com.jorda.puzzle.Algorithm.VerifyByWordsBasicMix;
 import com.jorda.puzzle.Algorithm.VerifyByWordsCleanUp;
@@ -21,7 +22,8 @@ public class AppTest
         new VerifyByWordsCleanUpNoSort(),
         new VerifyByWordsBasic(),
         new VerifyByWordsBasicMix(),
-        new VerifyByLetters()
+        new VerifyByLetters(),
+        new VerifyByLettersOp1()
     };
 
     /**
