@@ -22,9 +22,8 @@ should be sufficient.
 ## Big O Notation
 m = length of the message
 n = lenght of the magazine
-k = lenght of the message dictionary
 
-The complexity for the VerifyByLetters is: O(m)*O(n)*O(k)
+The complexity for the VerifyByLettersOp1 is: O(m)*O(n)
 
 <br/>
 
